@@ -18,7 +18,9 @@ npm start          # ejecuta el resultado
 
 ## Entrega
 
-- [ ] Los 20 ejercicios resueltos, cada uno bajo su comentario `// Ejercicio N`.
-- [ ] Las asignaciones incorrectas pedidas (1, 8 y 15) quedan **comentadas**.
-- [ ] `npm run check` en verde.
-- [ ] Subido a GitHub → entregar la **URL del repositorio**.
+- [x] Los 20 ejercicios resueltos, cada uno bajo su comentario `// Ejercicio N`.
+- [x] Las asignaciones incorrectas pedidas (1, 8 y 15) quedan **comentadas**.
+- [x] `npm run check` en verde.
+- [x] Subido a GitHub → entregar la **URL del repositorio**.
+
+**URL de entrega:** https://github.com/Marcobros1/bikram-typescript
