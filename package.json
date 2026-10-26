@@ -1,0 +1,13 @@
+{
+  "name": "bikram-typescript",
+  "version": "1.0.0",
+  "description": "Bikram de TypeScript - 20 ejercicios de dificultad progresiva",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
