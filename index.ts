@@ -7,9 +7,9 @@
 // asignar un valor de tipo incorrecto a una de ellas y observa el error que
 // indica TypeScript. Deja esa asignación incorrecta comentada.
 
-let nombre : string = "Marco";
-let edad : number = 23;
-let activo : boolean = true;
+const nombre : string = "Marco";
+const edad : number = 23;
+const activo : boolean = true;
 
 console.log("1. Nombre: " + nombre);
 console.log("1. Edad: " + edad);
@@ -23,17 +23,17 @@ console.log("1. Activo: " + activo);
 // valores 12.5, 30, 8.99 y 45. Crea una función sumarPrecios que reciba ese
 // array y devuelva la suma de sus elementos.
 
-let arrayOfNumbers : number[] = [12.5,30,8.99,45];
+let precios : number[] = [12.5, 30, 8.99, 45];
 
-function sumPrices(prices : number[]) : number{
-    let sum : number = 0;
-    prices.forEach(price => {
-        sum += price;
+function sumarPrecios(precios : number[]) : number {
+    let total : number = 0;
+    precios.forEach(precio => {
+        total += precio;
     });
-    return sum;
+    return total;
 }
 
-console.log("2. " + sumPrices(arrayOfNumbers));
+console.log("2. " + sumarPrecios(precios));
 
 // Ejercicio 3
 // Función de presentación.
@@ -134,13 +134,12 @@ console.log("7. " + mostrarProducto(cuchara));
 // asignarle "cancelada". Deja el intento incorrecto COMENTADO para que el
 // archivo pueda compilar.
 
-enum EstadoTarea {
-    Pendiente = "pendiente",
-    En_proceso = "en-proceso",
-    Completada = "completada"
-}
+type EstadoTarea = "pendiente" | "en-proceso" | "completada";
 
-//EstadoTarea.cancelada; Property 'cancelada' does not exist on type 'typeof EstadoTarea'.
+let estado : EstadoTarea = "pendiente";
+console.log("8. Estado actual: " + estado);
+
+// estado = "cancelada"; Type '"cancelada"' is not assignable to type 'EstadoTarea'.
 
 // Ejercicio 9
 // Interfaz de persona.
@@ -196,8 +195,8 @@ function availableBook(book : Libro) : boolean{
     return book.disponible;
 }
 
-books.forEach(book => {
-    console.log("10. " + book.titulo + " " + (availableBook(book) ? "is available" : "is not available"));
+books.filter(availableBook).forEach(book => {
+    console.log("10. " + book.titulo + " está disponible");
 });
 
 // === Uniones, unknown y tipos utilitarios ==================================
@@ -418,6 +417,7 @@ const letters : string[] = ["A","B","C","D"];
 
 console.log("19. " + primero(numbers));
 console.log("19. " + primero(letters));
+console.log("19. Array vacío: " + primero([]));
 
 // Ejercicio 20
 // Registro de puntuaciones y promesa.
